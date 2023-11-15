@@ -8,13 +8,13 @@ export default function ArrayState(){
   const addTodo = (text) => {
     setTodos([...todos, { text, completed: false }]);
   };
-
+   const list = todos.map((todo, index) => (
+    <li key={index}>{todo.text}</li>
+  ))
   return (
     <>
     <ul>
-        {todos.map((todo, index) => (
-          <li key={index}>{todo.text}</li>
-        ))}
+        {list}
       </ul>
       <button onClick={() => addTodo('New Todo')}>Add Todo</button>
     </>
