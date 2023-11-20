@@ -7,10 +7,19 @@ export function Square({value, onSquareClick}){
 
 export default function App(){
   const [squares, setSquares] = useState(Array(9).fill(null));
+  const [xIsNext, setxIsNext] = useState(true)
 
   function handClick(i){
+    if(squares[i]){
+      return;
+    }
     const nextSquare = squares.slice()
-    nextSquare[i] = 'X'
+    if(xIsNext){
+      nextSquare[i] = 'X'
+    }else{
+      nextSquare[i] = 'O'
+    }
+    setxIsNext(!xIsNext)
     setSquares(nextSquare)
 }
 
