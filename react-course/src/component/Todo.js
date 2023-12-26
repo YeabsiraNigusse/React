@@ -25,8 +25,7 @@ function Todo(props){
         {openModel && <Model onCancel={closeModalHandler} onConfirm={closeModalHandler}/>}
         {openModel && <Backdrop onCancel={closeModalHandler}/>}
        </>
-        
-       
+      
     )
 }
 
