@@ -1,4 +1,4 @@
-import Todo from "./component/Todo";
+import Todo from './component/Todo';
 
 
 function App() {
@@ -8,7 +8,6 @@ function App() {
    <Todo text='learn react'/>
    <Todo text='build website'/>
    <Todo text='become a developer'/>
-
    </>
   );
 }

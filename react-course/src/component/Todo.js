@@ -1,22 +1,32 @@
-import '../App.css'
+import { useState } from "react"
+import Model from "./Model"
+import Backdrop from "./Backdrop"
 
 function Todo(props){
 
+    const [openModel, setOpenModel] = useState(false)
+
     const handleDel = () =>{
-        console.log(props.text)
-        console.log('Clicked!')
+       setOpenModel(true)
+    }
+    const closeModalHandler = ()=>{
+        setOpenModel(false)
     }
 
     return(
-        <div className='parent'>
-        <div className='card'>
+       <>
+       <div className='card'>
           <h2>{props.text}</h2>
-          <div className='btn'>
-            <button className='del' onClick={handleDel}>Delete</button>
+          <div className='actions'>
+            <button className='btn' onClick={handleDel}>Delete</button>
           </div>
         </div>
-    
-        </div>
+
+        {openModel && <Model onCancel={closeModalHandler} onConfirm={closeModalHandler}/>}
+        {openModel && <Backdrop onCancel={closeModalHandler}/>}
+       </>
+        
+       
     )
 }
 
