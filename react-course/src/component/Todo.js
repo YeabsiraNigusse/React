@@ -1,10 +1,10 @@
 import '../App.css'
 
-function Todo(){
+function Todo(props){
     return(
         <div className='parent'>
         <div className='card'>
-          <h2>TITLE</h2>
+          <h2>{props.text}</h2>
           <div className='btn'>
             <button className='del'>Delete</button>
           </div>
