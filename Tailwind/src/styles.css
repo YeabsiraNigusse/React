@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* - the steps we go to setup a tailwindcss fieldset
+
+install npm
+initalize a project by npm init -y
+install tailwindcss by "npm install tailwindcss" command
+create src and public folder
+add styles.css file inside src folder
+insert and run " "build-css": "tailwindcss build src/styles.css -o public/styles.css"" command */
